@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background: #f7f7f7;
+        }
+        .btn {
+            display: inline-block;
+            background: #D44638; /* Gmail red */
+            color: white;
+            padding: 12px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: 0.3s;
+        }
+        .btn:hover {
+            background: #b23121;
+        }
+        img {
+            width: 25px;
+            vertical-align: middle;
+            margin-right: 8px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Contact Us</h1>
+    <p>Click the link below to send us an email:</p>
+
+    <!-- Standard Email Link -->
+    <p>
+        <a href="mailto:someone@gmail.com">Send Email (Default Email App)</a>
+    </p>
+
+    <!-- Gmail Direct Compose Button -->
+    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=someone@gmail.com&su=Website%20Inquiry&body=Hello,%20I%20would%20like%20more%20information."
+       class="btn">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png" alt="Gmail Logo">
+        Send Email via Gmail
+    </a>
+</body>
+</html>
