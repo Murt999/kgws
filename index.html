@@ -57,23 +57,15 @@
   Upon reaching the culmination of its voyage at the tap, the water’s arrival is not merely an act of delivery—it is a revelatory denouement, a cosmic unveiling where the elixir of life emerges as a distilled potion of enlightenment. This metaphysical transfiguration from source to tap thus mirrors the journey of the soul: an odyssey that seeks not just to satiate the corporeal but to elevate the spirit, melding the quintessence of nature with the aspirations of humankind into a resplendent tapestry of existence.</p>
 
   <script>
-    fetch("alert.txt")
-      .then(response => response.text())
-      .then(data => {
-        const alertBox = document.getElementById("alert-box");
-        const alertMsg = document.getElementById("alert-message");
-        if (data.trim().length > 0) {
-          alertMsg.textContent = data.trim();
-          alertBox.style.display = "block";
-        }
-      })
-      .catch(err => {
-      console.warn("Could not load alert.txt:", err);
+   fetch("alert.json")
+  .then(res => res.json())
+  .then(data => {
+    if(data.message.trim()) {
+      document.getElementById("alert-message").textContent = data.message;
+      document.getElementById("alert-box").style.display = "block";
+    }
   });
 
-    document.getElementById("alert-close").onclick = function () {
-      document.getElementById("alert-box").style.display = "none";
-    };
   </script>
   <script src="script.js"></script>
 </body>
